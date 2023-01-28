@@ -1,0 +1,13 @@
+.home-wrapper {
+    padding: 2em;
+    height: 100%;
+    display: flex;
+
+    .accounts-list, .budget-summary {
+        flex: 25%;
+    }
+
+    .budget {
+        flex: 50%
+    }
+}

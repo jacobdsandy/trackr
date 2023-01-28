@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  plaid_endpoint: "https://sandbox.plaid.com",
+  plaid_client_id: "63194f3e6803c100171b75c1",
+  plaid_secret: "e63519ff628250a7619d9cd4248732"
 };
 
 /*
