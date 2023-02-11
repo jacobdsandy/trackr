@@ -1,0 +1,25 @@
+<form [formGroup]="budgetSectionForm">
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ title }}</mat-panel-title>
+      <mat-panel-description>
+        <span class="percent"
+          >{{ (total / income) * 100 | number : "1.2-2" }}%</span
+        >
+        <mat-progress-bar
+          mode="determinate"
+          value="{{ (total / target) * 100 }}"
+        ></mat-progress-bar
+        ><span class="amount-left"
+          >${{ target - total | number : "1.2-2" }} left</span
+        >
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="expansion-fields">
+      <mat-form-field *ngFor="let field of fieldNames" appearance="outline">
+        <mat-label>{{ field }}</mat-label>
+        <input [formControlName]="camelCase(field)" matInput />
+      </mat-form-field>
+    </div>
+  </mat-expansion-panel>
+</form>

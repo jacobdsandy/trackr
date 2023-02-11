@@ -1,1 +1,46 @@
-<p>budget works!</p>
+<div class="budget-wrapper">
+  <div class="budget-income-boxes">
+    <mat-form-field appearance="outline">
+      <mat-label>Gross Monthly Income</mat-label>
+      <input
+        matInput
+        placeholder="0.00"
+        [(ngModel)]="income"
+        (ngModelChange)="onIncomeChanged($event)"
+        name="income"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-accordion [multi]="true">
+      <app-budget-section
+        [title]="'Fixed Costs (60%)'"
+        [percent]="fixedPercent"
+        [fieldNames]="fixedFields"
+        [key]="fixedKey"
+        [income]="income"
+      ></app-budget-section>
+      <app-budget-section
+        [title]="'Investments (10%)'"
+        [percent]="investmentsPercent"
+        [fieldNames]="investmentsFields"
+        [key]="investmentsKey"
+        [income]="income"
+      ></app-budget-section>
+      <app-budget-section
+        [title]="'Savings (10%)'"
+        [percent]="savingsPercent"
+        [fieldNames]="savingsFields"
+        [key]="savingsKey"
+        [income]="income"
+      ></app-budget-section>
+      <app-budget-section
+        [title]="'Guilt-free Spending (20%)'"
+        [percent]="guiltFreePercent"
+        [fieldNames]="guiltFreeFields"
+        [key]="guiltFreeKey"
+        [income]="income"
+      ></app-budget-section>
+    </mat-accordion>
+  </div>
+</div>

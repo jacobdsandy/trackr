@@ -3,13 +3,23 @@
     line-height: 3em;
     background-color: #2C3333;
     padding: 2em;
+    display: flex;
+    justify-content: space-between;
 
     .nav-bar-title {
         font-size: 2em;
-        font-weight: bold;
         color: #A5C9CA;
+        font-weight: bold;
         cursor: pointer;
         width: min-content;
+    }
+
+    .nav-bar-other-items-wrapper {
+        .nav-bar-other-item {
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+        }
     }
 }
 

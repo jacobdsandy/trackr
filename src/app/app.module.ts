@@ -4,13 +4,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { AppComponent } from './app.component';
 import { BudgetComponent } from './budget/budget.component';
-import { AccountsListComponent } from './accounts-list/accounts-list.component';
-import { BudgetSummaryComponent } from './budget-summary/budget-summary.component';
+import { HomeComponent } from './home/home.component';
+import { MaterialModule } from './material.module';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { BudgetSectionComponent } from './budget-section/budget-section.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,7 @@ import { BudgetSummaryComponent } from './budget-summary/budget-summary.componen
     HomeComponent,
     NavBarComponent,
     BudgetComponent,
-    AccountsListComponent,
-    BudgetSummaryComponent
+    BudgetSectionComponent
   ],
   imports: [
     AppRoutingModule,
@@ -27,7 +27,9 @@ import { BudgetSummaryComponent } from './budget-summary/budget-summary.componen
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
